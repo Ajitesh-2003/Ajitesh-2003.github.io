@@ -42,7 +42,7 @@ const animateOnScroll = () => {
         const screenPosition = window.innerHeight / 1.5;
         
         if (elementPosition < screenPosition) {
-            element.style.opacity = '2';
+            element.style.opacity = '1';
             element.style.transform = 'translateY(0)';
         }
     });
@@ -61,3 +61,7 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', animateOnScroll);
+
+function openExport() {
+    window.open('/export/index.html', '_blank');
+  }
