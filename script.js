@@ -39,10 +39,10 @@ const animateOnScroll = () => {
     
     elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+        const screenPosition = window.innerHeight / 1.5;
         
         if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
+            element.style.opacity = '2';
             element.style.transform = 'translateY(0)';
         }
     });

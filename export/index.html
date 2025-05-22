@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evoxify AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="evo-logo.jpg" alt="Evoxify Logo" class="logo">
+            <h1>Evoxify AI Assistant</h1>
+        </header>
+
+        <div class="chat-container">
+            <div id="preprocessingContainer" class="preprocessing-container" style="display: none;">
+                <div class="preprocessing-text">
+                    <span id="preprocessingText">Processing documents...</span>
+                    <span id="cacheStatus" class="cache-status" style="display: none;">CACHED</span>
+                </div>
+                <div class="preprocessing-progress">
+                    <div id="preprocessingProgress" class="preprocessing-progress-bar"></div>
+                </div>
+            </div>
+
+            <ul id="documentList" class="document-list" style="display: none;"></ul>
+
+            <div id="chatHistory" class="chat-history">
+            </div>
+
+            <div class="input-area">
+                <textarea id="userInput" placeholder="Type your question here..."></textarea>
+                <div class="controls">
+                    <div class="status-indicator">
+                        <div id="statusLight" class="status-light"></div>
+                        <span id="statusText">Initializing...</span>
+                    </div>
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Evoxify AI Assistant v2.0 | Powered by OpenAI</p>
+        </footer>
+    </div>
+
+    <div id="apiKeyModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter OpenAI API Key</h2>
+            <p>To use this application, please provide your OpenAI API key:</p>
+            <input type="password" id="apiKeyInput" placeholder="sk-...">
+            <p class="note">Your key is stored locally and only used to communicate with OpenAI's servers.</p>
+            <div class="modal-actions">
+                <button id="saveApiKey" class="primary">Save Key</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
